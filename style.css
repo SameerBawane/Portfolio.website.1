@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./moon.jpg);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container1 {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 100;
+    width: 100%;
+    background-color: black;
+}
+
+.container1 h2 {
+    font-size: 28px;
+    color: #fff;
+    padding: 0px 0px 0px 35px;
+    transition: 0.2s;
+}
+.container1 h2:hover{
+    transform: scale(1.2);
+    color: red;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 60px;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    background: red;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    top: 100%;
+    transition: 0.15s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.container2 {
+    /* position: relative; */
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+/* ------------animating h3------------------------ */
+@keyframes headingscroll
+{
+    0%{
+        transform: translateY(10%);
+    }
+    25%{
+        transform: translateY(-110%);
+    }
+    50%{
+        transform: translateY(-210%);
+    }
+    75%{
+        transform: translateY(-310%);
+    }
+    0%{
+        transform: translateY(10%);
+    }
+}
+
+.container2 h3 {
+    padding-top: 80px; /*to bring heading a little down*/
+    /* text-align: left; */
+    font-size: 2.8em;
+    >span{
+        /* position: relative; */
+        display: inline-block;
+        color: red;
+        height: 1.25em;
+        vertical-align: bottom;
+        overflow: hidden;
+        > span{
+            display: block;
+            animation: headingscroll 5.5s infinite ease alternate; 
+        }
+    }
+}
+
+.container3{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.container3 div h3{
+    margin-top: 5%;
+    font-size: 3rem;
+    text-align: center;
+}
+.container3 div h3 span{
+    color: red;
+}
+.images{
+    display: flex;
+    /* font-size: 3rem; */
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.container3 img {
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    padding: 2px;
+    border: 3px solid black;
+    border-radius: 50px 20px ;
+}
+.paragraph{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.paragraph p{
+    width: 60%;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+
+}
+.container4{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;   
+}
+.container4 h3{
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10%;
+    transition: 0.2s;
+}
+.container4 h3:hover{
+    transform: scale(1.2);
+    color: red;
+}
+.container4 .icon i:hover{
+    transform: scale(1.2);
+    color: red!important;
+}
+
+.properties{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    height: 50vh;
+    /* background-color: red; */
+}
+.p1,.p2,.p3{
+    width: 30%;
+    padding: 30px;
+    height: 30vh;
+    background-color: #fff;
+    margin: 15px;
+    border: 3px solid black;
+    border-radius: 50px 20px ;
+    /* align-self: center; */
+}
+.properties i{
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+}
+.properties p{
+    font-size: 1rem;
+    text-align: center;
+}
+.container6{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    overflow: hidden;
+    background-image: url(./pexels-irfan-ahamed-623147.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.container6 .footerimage{
+    height: 40%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    background-color: #fff;
+
+}
+.container6 .footerimage img{
+    height: 100%;
+}
+.details{
+    border-top: 3px solid black;
+    height: 50%;
+}
+.details .div1{
+    height: 100%;
+}
+.notextdecor {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    list-style: none;
+    /* padding: 0px; */
+}
+.notextdecor li i{
+    font-size: 2rem;
+    padding: 10px 5px;
+    transition: 0.2s;
+}
+.notextdecor li i:hover{
+    transform: scale(1.3);
+    color: red!important;
+    cursor: pointer;
+}
+.notextdecor li span{
+    /* vertical-align: text-top; */
+    color: #fff;
+}
